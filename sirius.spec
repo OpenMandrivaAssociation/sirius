@@ -1,5 +1,5 @@
 %define version 0.8.0
-%define release 4mdk
+%define release %mkrel 5
 
 Summary:	An othello chess game
 Name:		sirius
@@ -33,18 +33,6 @@ ways to give you a suitable opponent.
 [ -z "%{buildroot}" -o "%{buildroot}" = "/" ] || rm -rf %{buildroot}
 %makeinstall_std
 
-# menu entry
-mkdir -p %{buildroot}%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} << _EOF_
-?package(%{name}): \
- command="%{_bindir}/sirius" \
- icon="%{name}.png" \
- longtitle="An othello chess" \
- needs="x11" \
- section="Amusement/Boards" \
- title="Sirius"
-_EOF_
-
 # icons
 mkdir -p %{buildroot}%{_iconsdir} \
 	 %{buildroot}%{_liconsdir} \
@@ -71,7 +59,6 @@ convert -geometry 16x16 pixmaps/sirius.png %{buildroot}%{_miconsdir}/%{name}.png
 %{_datadir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/pixmaps/*
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
