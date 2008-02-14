@@ -7,6 +7,7 @@ Version:	%{version}
 Release:	%{release}
 License:	GPL
 Group:		Games/Boards
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://sirius.bitvis.nu/
 
 Source:		%{name}-%{version}.tar.bz2
