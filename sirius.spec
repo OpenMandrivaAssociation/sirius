@@ -1,5 +1,5 @@
 %define version 0.8.0
-%define release %mkrel 5
+%define release %mkrel 7
 
 Summary:	An othello chess game
 Name:		sirius
