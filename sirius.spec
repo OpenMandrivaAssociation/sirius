@@ -13,7 +13,7 @@ URL:		http://sirius.bitvis.nu/
 Source:		%{name}-%{version}.tar.bz2
 
 BuildRequires:	libgnomeui2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 
 %description
 Sirius is a program for playing the game of othello. The program
