@@ -1,16 +1,17 @@
 %define version 0.8.0
-%define release %mkrel 7
+%define release %mkrel 8
 
 Summary:	An othello chess game
 Name:		sirius
 Version:	%{version}
 Release:	%{release}
-License:	GPL
+License:	GPLv2+
 Group:		Games/Boards
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://sirius.bitvis.nu/
 
 Source:		%{name}-%{version}.tar.bz2
+Patch0:		sirius-0.8.0-fix-desktop-file.patch
 
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	imagemagick
@@ -24,6 +25,7 @@ ways to give you a suitable opponent.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure2_5x
