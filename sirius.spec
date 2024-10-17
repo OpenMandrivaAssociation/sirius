@@ -8,7 +8,7 @@ Release:	%{release}
 License:	GPLv2+
 Group:		Games/Boards
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:		http://sirius.bitvis.nu/
+URL:		https://sirius.bitvis.nu/
 
 Source:		%{name}-%{version}.tar.bz2
 Patch0:		sirius-0.8.0-fix-desktop-file.patch
