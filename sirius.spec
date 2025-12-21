@@ -13,6 +13,11 @@ URL:		https://sirius.bitvis.nu/
 Source:		%{name}-%{version}.tar.bz2
 Patch0:		sirius-0.8.0-fix-desktop-file.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	libgnomeui2-devel
 BuildRequires:	imagemagick
 
